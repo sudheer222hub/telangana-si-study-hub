@@ -19,6 +19,8 @@ details{background:#fff;border:1px solid var(--line);border-radius:10px;margin:8
 .progressrow{display:flex;justify-content:space-between;gap:10px;align-items:center}.progress{height:10px;border-radius:999px;background:#e4eaf3;overflow:hidden;margin-top:8px}.bar{height:100%;width:0;background:linear-gradient(90deg,#3c78c8,#3ca77a);transition:width .25s}
 footer{text-align:center;color:var(--muted);padding:18px;font-size:.85rem}.hide{display:none!important}
 @media(max-width:540px){nav a{padding:7px 9px;font-size:.9rem}.panel{border-radius:14px}.grid{grid-template-columns:1fr}table{font-size:.9rem}}
+
+@media print{nav,button,.button,footer{display:none!important}body{background:#fff}.panel{box-shadow:none;break-inside:avoid}.card{break-inside:avoid}details .answer{display:block}}
 </style>
 </head>
 <body>
@@ -43,30 +45,59 @@ footer{text-align:center;color:var(--muted);padding:18px;font-size:.85rem}.hide{
 
 <section class="panel" id="maths">
 <h2 class="title"><span class="icon">📐</span> Maths — Topic 01: Percentages</h2>
-<div class="formula">x% of N = (x ÷ 100) × N</div>
-<p>Percentage ante 100 lo entha part. Quick calculations kosam common fractions gurthupettuko.</p>
+<p class="small">Chapter goal: concept clear chesukoni, model identify chesi, time limit lo accurate ga solve cheyyadam. First accuracy, then speed.</p>
+<div class="formula">Percentage = (Part ÷ Whole) × 100</div>
+<p>Percentage ante “100 lo entha?” Example: 25% ante 100 lo 25 parts, ante one-fourth (¼). Question lo <b>whole/base value</b> identify cheyyadam most important.</p>
+
+<div class="note green"><b>🎯 3-step solving method</b><br>1) Given values mark cheyyi → 2) Question em adugutundo identify cheyyi → 3) Formula apply chesi answer ni estimate tho check cheyyi.</div>
+
 <div class="grid">
-<div class="card"><h3>⚡ Fraction shortcuts</h3><table><tr><th>Percent</th><th>Fraction</th><th>Shortcut</th></tr><tr><td>50%</td><td>1/2</td><td>÷ 2</td></tr><tr><td>25%</td><td>1/4</td><td>÷ 4</td></tr><tr><td>20%</td><td>1/5</td><td>÷ 5</td></tr><tr><td>10%</td><td>1/10</td><td>÷ 10</td></tr><tr><td>12.5%</td><td>1/8</td><td>÷ 8</td></tr><tr><td>75%</td><td>3/4</td><td>× 3 ÷ 4</td></tr><tr><td>33⅓%</td><td>1/3</td><td>÷ 3</td></tr><tr><td>16⅔%</td><td>1/6</td><td>÷ 6</td></tr></table></div>
-<div class="card"><h3>🧠 Model 1 — Direct percentage</h3><p><b>640 lo 15% entha?</b></p><p>10% = 64; 5% = 32.</p><div class="formula">15% = 64 + 32 = 96</div><p class="small">Shortcut: 15% ni 10% + 5% ga split cheyyi.</p></div>
-<div class="card"><h3>🔎 Model 2 — Find original number</h3><p><b>Oka number lo 30% = 150. Number?</b></p><p>10% = 150 ÷ 3 = 50.</p><div class="formula">100% = 50 × 10 = 500</div></div>
-<div class="card"><h3>📈 Model 3 — Increase</h3><p>₹400 nunchi ₹500 ki price perigindi.</p><p>Increase = ₹100.</p><div class="formula">100 ÷ 400 × 100 = 25%</div></div>
-<div class="card"><h3>📉 Model 4 — Decrease</h3><p>₹1,000 nunchi ₹800 ki price taggindi.</p><p>Decrease = ₹200.</p><div class="formula">200 ÷ 1,000 × 100 = 20%</div></div>
-<div class="card"><h3>🔁 Model 5 — Successive change</h3><p>20% increase, then 10% decrease. Original ₹100 anuko: ₹100 → ₹120 → ₹108.</p><div class="formula">Net result = 8% increase</div><p class="small">Trap: 20 − 10 = 10% ani direct ga subtract cheyyaku.</p></div>
+<div class="card"><h3>⚡ Fraction shortcuts</h3><table><tr><th>Percent</th><th>Fraction</th><th>Quick method</th></tr>
+<tr><td>1%</td><td>1/100</td><td>÷ 100</td></tr><tr><td>5%</td><td>1/20</td><td>÷ 20</td></tr><tr><td>10%</td><td>1/10</td><td>÷ 10</td></tr><tr><td>12.5%</td><td>1/8</td><td>÷ 8</td></tr><tr><td>16⅔%</td><td>1/6</td><td>÷ 6</td></tr><tr><td>20%</td><td>1/5</td><td>÷ 5</td></tr><tr><td>25%</td><td>1/4</td><td>÷ 4</td></tr><tr><td>33⅓%</td><td>1/3</td><td>÷ 3</td></tr><tr><td>37.5%</td><td>3/8</td><td>÷ 8 × 3</td></tr><tr><td>50%</td><td>1/2</td><td>÷ 2</td></tr><tr><td>62.5%</td><td>5/8</td><td>÷ 8 × 5</td></tr><tr><td>75%</td><td>3/4</td><td>÷ 4 × 3</td></tr></table></div>
+<div class="card"><h3>🧠 Model 1 — Direct percentage</h3><p><b>640 lo 15% entha?</b></p><p>10% = 64; 5% = 32.</p><div class="formula">15% = 64 + 32 = 96</div><p class="small">Shortcut: percentage ni easy parts ga split cheyyi.</p></div>
+<div class="card"><h3>🔎 Model 2 — Find the whole</h3><p><b>Oka number lo 30% = 150. Number?</b></p><p>10% = 150 ÷ 3 = 50; 100% = 50 × 10.</p><div class="formula">Answer = 500</div></div>
+<div class="card"><h3>📈 Model 3 — Percentage increase</h3><p>Price ₹400 nunchi ₹500 ki perigindi.</p><p>Increase = 500 − 400 = ₹100.</p><div class="formula">100 ÷ 400 × 100 = 25%</div><p class="small">Denominator always original value.</p></div>
+<div class="card"><h3>📉 Model 4 — Percentage decrease</h3><p>Price ₹1,000 nunchi ₹800 ki taggindi.</p><p>Decrease = ₹200.</p><div class="formula">200 ÷ 1,000 × 100 = 20%</div></div>
+<div class="card"><h3>🏷️ Model 5 — Discount</h3><p>₹1,200 item meeda 15% discount.</p><p>10% = 120; 5% = 60; discount = ₹180.</p><div class="formula">Final price = ₹1,020</div></div>
+<div class="card"><h3>🔁 Model 6 — Successive changes</h3><p>₹100 meeda 20% increase, then 10% decrease.</p><p>100 → 120 → 108.</p><div class="formula">Net = 8% increase</div><p class="small">20 − 10 = 10% ani direct subtract cheyyakudadhu.</p></div>
+<div class="card"><h3>🧾 Model 7 — More/less comparison</h3><p>A, B kanna 25% ekkuva. B = 200.</p><p>25% of 200 = 50.</p><div class="formula">A = 250</div><p class="small">Base B kabatti 200 meeda percentage calculate cheyyali.</p></div>
+<div class="card"><h3>↔️ Model 8 — Reverse comparison trap</h3><p>A is 25% more than B. Then B is A kanna entha % less?</p><p>B = 100 anukunte A = 125. Difference = 25.</p><div class="formula">25 ÷ 125 × 100 = 20% less</div><p class="small">Comparison base marithe percentage kuda marutundi.</p></div>
+<div class="card"><h3>🗳️ Model 9 — Pass/fail</h3><p>40% marks = 160. Total marks?</p><p>1% = 160 ÷ 40 = 4.</p><div class="formula">100% = 400 marks</div></div>
+<div class="card"><h3>👥 Model 10 — Population/salary</h3><p>Salary ₹20,000; 12% increase.</p><p>Increase = 10% (₹2,000) + 2% (₹400).</p><div class="formula">New salary = ₹22,400</div></div>
 </div>
-<h3>✍️ Short-answer practice</h3>
-<p>Answer reveal cheyyadaniki question meeda tap cheyyi.</p>
+
+<h3>📌 Important formulas — quick revision</h3>
+<table><tr><th>Question type</th><th>Formula / rule</th></tr>
+<tr><td>x% of N</td><td>(x ÷ 100) × N</td></tr>
+<tr><td>What % is A of B?</td><td>(A ÷ B) × 100</td></tr>
+<tr><td>Increase %</td><td>(Increase ÷ Original) × 100</td></tr>
+<tr><td>Decrease %</td><td>(Decrease ÷ Original) × 100</td></tr>
+<tr><td>After x% increase</td><td>Original × (100 + x) ÷ 100</td></tr>
+<tr><td>After x% decrease</td><td>Original × (100 − x) ÷ 100</td></tr>
+<tr><td>Successive changes a%, b%</td><td>Net % = a + b + (ab ÷ 100), decrease ni negative ga use cheyyi</td></tr></table>
+
+<div class="note gold"><b>⚠️ Common mistakes</b><br>• Increase/decrease percentage calculate chesetappudu original value ni denominator ga use cheyyi.<br>• “A is 20% more than B” and “B is 20% less than A” same kaavu.<br>• Two successive percentage changes ni simply add/subtract cheyyaku.<br>• Units and arithmetic final ga check cheyyi.</div>
+
+<h3>✍️ Practice bank — answer tap chesi explanation chudandi</h3>
+<p class="small">First answers cover cheyyakunda solve cheyyi. Rough work use cheyyi.</p>
 <div id="shortPractice">
 <details><summary>1. 480 lo 25% entha?</summary><div class="answer">480 ÷ 4 = <b>120</b>.</div></details>
 <details><summary>2. 750 lo 12% entha?</summary><div class="answer">10% = 75; 2% = 15; total = <b>90</b>.</div></details>
-<details><summary>3. Oka number lo 25% = 75. Number?</summary><div class="answer">75 × 4 = <b>300</b>.</div></details>
-<details><summary>4. Salary ₹12,000 nunchi ₹15,000 ki perigindi. Increase %?</summary><div class="answer">Increase ₹3,000. 3,000 ÷ 12,000 × 100 = <b>25%</b>.</div></details>
-<details><summary>5. Price ₹600 nunchi ₹510 ki taggindi. Decrease %?</summary><div class="answer">Decrease ₹90. 90 ÷ 600 × 100 = <b>15%</b>.</div></details>
-<details><summary>6. 10% increase, then 10% decrease. Overall change?</summary><div class="answer">100 → 110 → 99, so <b>1% decrease</b>.</div></details>
-<details><summary>7. ₹800 item meeda 25% discount. Final price?</summary><div class="answer">Discount ₹200; final = <b>₹600</b>.</div></details>
-<details><summary>8. Oka number lo 40% = 200. Aa number lo 65%?</summary><div class="answer">Number = 500; 65% = <b>325</b>.</div></details>
+<details><summary>3. Oka number lo 25% = 75. Number?</summary><div class="answer">100% = 75 × 4 = <b>300</b>.</div></details>
+<details><summary>4. Salary ₹12,000 nunchi ₹15,000 ki perigindi. Increase %?</summary><div class="answer">Increase = ₹3,000. (3,000 ÷ 12,000) × 100 = <b>25%</b>.</div></details>
+<details><summary>5. Price ₹600 nunchi ₹510 ki taggindi. Decrease %?</summary><div class="answer">Decrease = ₹90. (90 ÷ 600) × 100 = <b>15%</b>.</div></details>
+<details><summary>6. 10% increase, then 10% decrease. Overall change?</summary><div class="answer">100 → 110 → 99. Net result = <b>1% decrease</b>.</div></details>
+<details><summary>7. ₹800 item meeda 25% discount. Final price?</summary><div class="answer">Discount = ₹200; final price = <b>₹600</b>.</div></details>
+<details><summary>8. Oka number lo 40% = 200. Aa number lo 65%?</summary><div class="answer">Number = 200 × 100 ÷ 40 = 500. 65% of 500 = <b>325</b>.</div></details>
+<details><summary>9. 360 lo 37.5% entha?</summary><div class="answer">37.5% = 3/8. 360 ÷ 8 × 3 = <b>135</b>.</div></details>
+<details><summary>10. A, B kanna 20% ekkuva. B = 450. A entha?</summary><div class="answer">20% of 450 = 90. A = 450 + 90 = <b>540</b>.</div></details>
+<details><summary>11. Oka number 20% taggi 640 ayyindi. Original number?</summary><div class="answer">640 is 80%. Original = 640 × 100 ÷ 80 = <b>800</b>.</div></details>
+<details><summary>12. Population 10% perigindi, next year 10% perigindi. Total increase?</summary><div class="answer">100 → 110 → 121. Net increase = <b>21%</b>.</div></details>
+<details><summary>13. 45 is what percent of 180?</summary><div class="answer">(45 ÷ 180) × 100 = <b>25%</b>.</div></details>
+<details><summary>14. A is 25% more than B. B, A kanna entha % less?</summary><div class="answer">B = 100 anukunte A = 125. Difference 25; (25 ÷ 125) × 100 = <b>20%</b>.</div></details>
+<details><summary>15. ₹2,500 salary meeda 8% increase. New salary?</summary><div class="answer">8% = ₹200. New salary = <b>₹2,700</b>.</div></details>
 </div>
 </section>
-
 <section class="panel" id="reasoning">
 <h2 class="title"><span class="icon">🧩</span> Reasoning — Number Series</h2>
 <div class="grid">
@@ -86,11 +117,12 @@ footer{text-align:center;color:var(--muted);padding:18px;font-size:.85rem}.hide{
 </section>
 
 <section class="panel" id="practice">
-<h2 class="title"><span class="icon">📝</span> Percentages — 10-question sprint</h2>
-<p><b>Target: 8 minutes.</b> Select an option to see feedback. After answering, check your score.</p>
-<div id="quiz"></div><button class="button" id="scoreBtn">Check my score</button><div id="score" class="formula hide" style="margin-top:12px"></div>
+<h2 class="title"><span class="icon">📝</span> Practice Zone — Percentages Quiz</h2>
+<p>10-question starter quiz. Oka question ki answer select cheyyi; immediate feedback vastundi. End lo score check cheyyi.</p>
+<div class="note violet"><b>Test rule:</b> Calculator use cheyyakunda try cheyyi. Target: first accuracy, next speed.</div>
+<div id="quiz"></div>
+<div class="progressrow"><b id="quizScore">Score: 0 / 10</b><button class="button secondary" id="resetQuiz" type="button">Restart quiz</button></div>
 </section>
-
 <section class="panel" id="progress">
 <h2 class="title"><span class="icon">✅</span> Your topic progress</h2>
 <p class="small">These checkboxes save on this browser/device using local storage. They won't automatically sync between devices.</p>
@@ -108,20 +140,22 @@ footer{text-align:center;color:var(--muted);padding:18px;font-size:.85rem}.hide{
 </main>
 <script>
 const qs=[
-{q:"1. 960 lo 25% entha?",o:["220","240","260","280"],a:1,e:"25% = 1/4; 960 ÷ 4 = 240."},
-{q:"2. 720 lo 12.5% entha?",o:["80","90","100","120"],a:1,e:"12.5% = 1/8; 720 ÷ 8 = 90."},
-{q:"3. Oka number lo 35% = 140. Number?",o:["350","400","450","500"],a:1,e:"100% = 140 × 100 ÷ 35 = 400."},
-{q:"4. ₹500 price ₹600 ayindi. Increase %?",o:["10%","15%","20%","25%"],a:2,e:"Increase 100; 100 ÷ 500 × 100 = 20%."},
-{q:"5. ₹800 price ₹680 ayindi. Decrease %?",o:["10%","12%","15%","20%"],a:2,e:"Decrease 120; 120 ÷ 800 × 100 = 15%."},
-{q:"6. 400 lo 45% entha?",o:["160","170","180","190"],a:2,e:"40% = 160; 5% = 20; total = 180."},
-{q:"7. Oka number lo 20% = 64. Number?",o:["280","300","320","340"],a:2,e:"100% = 64 × 5 = 320."},
-{q:"8. ₹20,000 salary 10% increase ayithe new salary?",o:["₹21,000","₹22,000","₹23,000","₹24,000"],a:1,e:"10% = ₹2,000; new salary = ₹22,000."},
-{q:"9. ₹1,500 price 20% decrease ayithe new price?",o:["₹1,100","₹1,200","₹1,250","₹1,300"],a:1,e:"20% = ₹300; new price = ₹1,200."},
-{q:"10. Value 20% increase, then 20% decrease. Overall?",o:["No change","4% increase","4% decrease","2% decrease"],a:2,e:"100 → 120 → 96, net 4% decrease."}
+{q:"1. 320 lo 25% entha?",o:["40","80","100","120"],a:1,e:"25% = 1/4. 320 ÷ 4 = 80."},
+{q:"2. Oka number lo 20% = 90. Number?",o:["180","360","450","500"],a:2,e:"10% = 45, kabatti 100% = 450."},
+{q:"3. ₹800 nunchi ₹1,000 ki increase percentage?",o:["20%","25%","30%","15%"],a:1,e:"Increase 200. 200 ÷ 800 × 100 = 25%."},
+{q:"4. ₹1,500 meeda 10% discount taruvatha price?",o:["₹1,350","₹1,400","₹1,250","₹1,050"],a:0,e:"10% of 1,500 = 150. Final = ₹1,350."},
+{q:"5. 60 is what percent of 240?",o:["20%","25%","30%","40%"],a:1,e:"60 ÷ 240 × 100 = 25%."},
+{q:"6. 20% increase, then 20% decrease. Net change?",o:["No change","4% increase","4% decrease","2% decrease"],a:2,e:"100 → 120 → 96, so 4% decrease."},
+{q:"7. Number 25% decrease ayyaka 600 ayyindi. Original?",o:["750","800","825","900"],a:1,e:"600 is 75%. Original = 600 × 100 ÷ 75 = 800."},
+{q:"8. 12.5% of 640?",o:["60","70","80","90"],a:2,e:"12.5% = 1/8. 640 ÷ 8 = 80."},
+{q:"9. A is 20% more than B. B=250. A?",o:["280","290","300","320"],a:2,e:"20% of 250 = 50. A = 300."},
+{q:"10. Population 10% increase twice. Net increase?",o:["20%","21%","19%","22%"],a:1,e:"100 → 110 → 121. Net increase = 21%."}
 ];
 const root=document.getElementById("quiz");
-qs.forEach((q,i)=>{const box=document.createElement("div");box.className="q";const title=document.createElement("strong");title.textContent=q.q;box.appendChild(title);const opts=document.createElement("div");opts.className="options";q.o.forEach((t,j)=>{const b=document.createElement("button");b.className="opt";b.textContent=String.fromCharCode(65+j)+") "+t;b.onclick=()=>{[...opts.children].forEach(x=>x.classList.remove("correct","wrong"));b.classList.add(j===q.a?"correct":"wrong");fb.textContent=(j===q.a?"✓ Correct. ":"✗ Not quite. ")+q.e;box.dataset.answer=j};opts.appendChild(b)});box.appendChild(opts);const fb=document.createElement("div");fb.className="feedback";box.appendChild(fb);root.appendChild(box)});
-document.getElementById("scoreBtn").onclick=()=>{let score=0,attempted=0;[...root.children].forEach((b,i)=>{if(b.dataset.answer!==undefined){attempted++;if(Number(b.dataset.answer)===qs[i].a)score++}});const el=document.getElementById("score");el.classList.remove("hide");el.textContent=`Score: ${score}/10 • Attempted: ${attempted}/10`+(attempted<10?" • Migilina questions kuda attempt cheyyi.":" • Wrong answers review cheyyi.");localStorage.setItem("tsi_quiz_attempted","1");loadChecks()};
+function renderQuiz(){root.innerHTML="";qs.forEach((q,i)=>{const box=document.createElement("div");box.className="q";const title=document.createElement("strong");title.textContent=q.q;box.appendChild(title);const opts=document.createElement("div");opts.className="options";q.o.forEach((t,j)=>{const b=document.createElement("button");b.type="button";b.className="opt";b.textContent=String.fromCharCode(65+j)+") "+t;b.onclick=()=>{if(box.dataset.answer!==undefined)return;box.dataset.answer=String(j);b.classList.add(j===q.a?"correct":"wrong");if(j!==q.a)opts.children[q.a].classList.add("correct");fb.textContent=(j===q.a?"✓ Correct. ":"✗ Not quite. ")+q.e;updateQuizScore()};opts.appendChild(b)});box.appendChild(opts);const fb=document.createElement("div");fb.className="feedback";box.appendChild(fb);root.appendChild(box)});updateQuizScore()}
+function updateQuizScore(){let score=0,attempted=0;[...root.children].forEach((b,i)=>{if(b.dataset.answer!==undefined){attempted++;if(Number(b.dataset.answer)===qs[i].a)score++}});document.getElementById("quizScore").textContent=`Score: ${score} / 10 • Attempted: ${attempted} / 10`;if(attempted===10){localStorage.setItem("tsi_quiz_attempted","1");loadChecks()}}
+document.getElementById("resetQuiz").onclick=()=>{renderQuiz()};
+renderQuiz();
 const checkboxes=[...document.querySelectorAll("#checks input")];
 function loadChecks(){checkboxes.forEach(c=>{c.checked=localStorage.getItem("tsi_"+c.dataset.key)==="1"});const count=checkboxes.filter(c=>c.checked).length;document.getElementById("progressText").textContent=`${count} of ${checkboxes.length} complete`;document.getElementById("progressPct").textContent=`${Math.round(count/checkboxes.length*100)}%`;document.getElementById("progressBar").style.width=(count/checkboxes.length*100)+"%"}
 checkboxes.forEach(c=>c.addEventListener("change",()=>{localStorage.setItem("tsi_"+c.dataset.key,c.checked?"1":"0");loadChecks()}));
