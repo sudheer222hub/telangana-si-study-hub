@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#263e73">
+<title>Telangana SI Study Hub</title>
+<style>
+:root{--navy:#263e73;--blue:#3869bd;--ink:#24314b;--muted:#68748b;--bg:#eef3fa;--paper:#fffdf8;--line:#dfe7f2;--green:#19815a;--greenbg:#e9f8f0;--pink:#c84470;--pinkbg:#fff0f5;--gold:#a95c11;--goldbg:#fff4e5;--violet:#7250a9;--violetbg:#f2edff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:linear-gradient(125deg,#223665,#3869bd 68%,#7969bd);color:#fff;padding:26px 16px 22px}.wrap{max-width:1080px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.75rem;font-weight:800;opacity:.85}h1{font-size:clamp(2rem,5vw,3.25rem);line-height:1.1;margin:8px 0}header p{max-width:700px;color:#edf3ff;margin:8px 0 0}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.chip{padding:5px 10px;border:1px solid #ffffff66;background:#ffffff18;border-radius:999px;font-size:.85rem}
+nav{position:sticky;top:0;z-index:5;background:#fff;box-shadow:0 3px 12px #263e7310;display:flex;gap:4px;overflow:auto;padding:8px max(12px,calc((100% - 1050px)/2))}nav a{white-space:nowrap;text-decoration:none;color:var(--navy);font-weight:750;padding:8px 12px;border-radius:10px}nav a:hover{background:#eaf1ff}
+main{max-width:1080px;padding:18px 14px 45px;margin:auto}.panel{background:var(--paper);border:1px solid #e6e5df;border-radius:18px;padding:clamp(16px,3vw,26px);margin:15px 0;box-shadow:0 8px 25px #273a5a0c}.title{display:flex;gap:10px;align-items:center;font-size:1.4rem;margin:0 0 13px}.icon{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:#eaf1ff;font-size:1.25rem;flex:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:16px}.card h3{margin:3px 0 5px}.card p{margin:5px 0;color:var(--muted)}.label{font-size:.74rem;text-transform:uppercase;letter-spacing:.09em;color:var(--blue);font-weight:900}.button{display:inline-block;border:0;border-radius:10px;background:var(--blue);color:#fff;padding:10px 14px;font-weight:800;cursor:pointer;text-decoration:none;margin-top:8px}.button.secondary{background:#eaf1ff;color:var(--navy)}.small{font-size:.88rem;color:var(--muted)}
+.formula{background:#eaf1ff;border-left:5px solid var(--blue);padding:13px 15px;border-radius:9px;font-weight:850;font-size:1.1rem}.note{padding:12px 14px;border-radius:10px;margin:12px 0}.green{background:var(--greenbg);border-left:5px solid var(--green)}.pink{background:var(--pinkbg);border-left:5px solid var(--pink)}.gold{background:var(--goldbg);border-left:5px solid var(--gold)}.violet{background:var(--violetbg);border-left:5px solid var(--violet)}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden}th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line)}th{background:#eaf1ff;color:var(--navy)}tr:last-child td{border-bottom:0}
+details{background:#fff;border:1px solid var(--line);border-radius:10px;margin:8px 0}summary{padding:10px 13px;cursor:pointer;font-weight:800}.answer{padding:0 13px 12px;color:var(--muted)}
+.q{padding:14px 0;border-bottom:1px dashed #d3dce9}.q:last-child{border-bottom:0}.q strong{display:block;margin-bottom:7px}.options{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:7px}.opt{background:#fff;border:1px solid #d7e0ee;border-radius:9px;padding:9px;text-align:left;font:inherit;cursor:pointer;color:var(--ink)}.opt:hover{background:#eaf1ff}.opt.correct{background:var(--greenbg);border-color:var(--green)}.opt.wrong{background:var(--pinkbg);border-color:var(--pink)}.feedback{font-size:.9rem;font-weight:750;margin-top:6px;min-height:1.3em}
+.progressrow{display:flex;justify-content:space-between;gap:10px;align-items:center}.progress{height:10px;border-radius:999px;background:#e4eaf3;overflow:hidden;margin-top:8px}.bar{height:100%;width:0;background:linear-gradient(90deg,#3c78c8,#3ca77a);transition:width .25s}
+footer{text-align:center;color:var(--muted);padding:18px;font-size:.85rem}.hide{display:none!important}
+@media(max-width:540px){nav a{padding:7px 9px;font-size:.9rem}.panel{border-radius:14px}.grid{grid-template-columns:1fr}table{font-size:.9rem}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="eyebrow">Your exam preparation workspace</div>
+<h1>Telangana SI<br>Study Hub 📚</h1>
+<p>One place for concepts, visual notes, solved examples, practice sets and revision. Simple Telugu-English explanations, built for phone and laptop.</p>
+<div class="chips"><span class="chip">📱 Mobile friendly</span><span class="chip">📐 Maths</span><span class="chip">🧩 Reasoning</span><span class="chip">🌏 General Studies</span><span class="chip">📝 Practice</span></div>
+</div></header>
+<nav><a href="#home">🏠 Home</a><a href="#maths">📐 Maths</a><a href="#reasoning">🧩 Reasoning</a><a href="#gs">🌏 GS</a><a href="#practice">📝 Practice</a><a href="#progress">✅ Progress</a></nav>
+<main>
+<section class="panel" id="home">
+<h2 class="title"><span class="icon">🧭</span> Study dashboard</h2>
+<p>Mana method: <b>Quick concept → question models → 1–2 solved examples per model → practice bank → timed test → mistake review.</b></p>
+<div class="grid">
+<div class="card"><div class="label">Today's focus</div><h3>📐 Percentages</h3><p>Formula shortcuts, increase/decrease, successive changes and MCQs.</p><a class="button" href="#maths">Start Maths</a></div>
+<div class="card"><div class="label">Reasoning starter</div><h3>🧩 Number Series</h3><p>Find the pattern: differences, multiplication and alternating terms.</p><a class="button secondary" href="#reasoning">Open Reasoning</a></div>
+<div class="card"><div class="label">GS starter</div><h3>🌏 Indian Polity</h3><p>Constitution basics and key dates, followed by quick recall questions.</p><a class="button secondary" href="#gs">Open GS</a></div>
+</div>
+<div class="note gold"><b>Study rule:</b> Official notification does not give a reliable topic-wise question count. We will prioritize syllabus relevance, learnability and practice performance—not invent exact weightage.</div>
+</section>
+
+<section class="panel" id="maths">
+<h2 class="title"><span class="icon">📐</span> Maths — Topic 01: Percentages</h2>
+<div class="formula">x% of N = (x ÷ 100) × N</div>
+<p>Percentage ante 100 lo entha part. Quick calculations kosam common fractions gurthupettuko.</p>
+<div class="grid">
+<div class="card"><h3>⚡ Fraction shortcuts</h3><table><tr><th>Percent</th><th>Fraction</th><th>Shortcut</th></tr><tr><td>50%</td><td>1/2</td><td>÷ 2</td></tr><tr><td>25%</td><td>1/4</td><td>÷ 4</td></tr><tr><td>20%</td><td>1/5</td><td>÷ 5</td></tr><tr><td>10%</td><td>1/10</td><td>÷ 10</td></tr><tr><td>12.5%</td><td>1/8</td><td>÷ 8</td></tr><tr><td>75%</td><td>3/4</td><td>× 3 ÷ 4</td></tr><tr><td>33⅓%</td><td>1/3</td><td>÷ 3</td></tr><tr><td>16⅔%</td><td>1/6</td><td>÷ 6</td></tr></table></div>
+<div class="card"><h3>🧠 Model 1 — Direct percentage</h3><p><b>640 lo 15% entha?</b></p><p>10% = 64; 5% = 32.</p><div class="formula">15% = 64 + 32 = 96</div><p class="small">Shortcut: 15% ni 10% + 5% ga split cheyyi.</p></div>
+<div class="card"><h3>🔎 Model 2 — Find original number</h3><p><b>Oka number lo 30% = 150. Number?</b></p><p>10% = 150 ÷ 3 = 50.</p><div class="formula">100% = 50 × 10 = 500</div></div>
+<div class="card"><h3>📈 Model 3 — Increase</h3><p>₹400 nunchi ₹500 ki price perigindi.</p><p>Increase = ₹100.</p><div class="formula">100 ÷ 400 × 100 = 25%</div></div>
+<div class="card"><h3>📉 Model 4 — Decrease</h3><p>₹1,000 nunchi ₹800 ki price taggindi.</p><p>Decrease = ₹200.</p><div class="formula">200 ÷ 1,000 × 100 = 20%</div></div>
+<div class="card"><h3>🔁 Model 5 — Successive change</h3><p>20% increase, then 10% decrease. Original ₹100 anuko: ₹100 → ₹120 → ₹108.</p><div class="formula">Net result = 8% increase</div><p class="small">Trap: 20 − 10 = 10% ani direct ga subtract cheyyaku.</p></div>
+</div>
+<h3>✍️ Short-answer practice</h3>
+<p>Answer reveal cheyyadaniki question meeda tap cheyyi.</p>
+<div id="shortPractice">
+<details><summary>1. 480 lo 25% entha?</summary><div class="answer">480 ÷ 4 = <b>120</b>.</div></details>
+<details><summary>2. 750 lo 12% entha?</summary><div class="answer">10% = 75; 2% = 15; total = <b>90</b>.</div></details>
+<details><summary>3. Oka number lo 25% = 75. Number?</summary><div class="answer">75 × 4 = <b>300</b>.</div></details>
+<details><summary>4. Salary ₹12,000 nunchi ₹15,000 ki perigindi. Increase %?</summary><div class="answer">Increase ₹3,000. 3,000 ÷ 12,000 × 100 = <b>25%</b>.</div></details>
+<details><summary>5. Price ₹600 nunchi ₹510 ki taggindi. Decrease %?</summary><div class="answer">Decrease ₹90. 90 ÷ 600 × 100 = <b>15%</b>.</div></details>
+<details><summary>6. 10% increase, then 10% decrease. Overall change?</summary><div class="answer">100 → 110 → 99, so <b>1% decrease</b>.</div></details>
+<details><summary>7. ₹800 item meeda 25% discount. Final price?</summary><div class="answer">Discount ₹200; final = <b>₹600</b>.</div></details>
+<details><summary>8. Oka number lo 40% = 200. Aa number lo 65%?</summary><div class="answer">Number = 500; 65% = <b>325</b>.</div></details>
+</div>
+</section>
+
+<section class="panel" id="reasoning">
+<h2 class="title"><span class="icon">🧩</span> Reasoning — Number Series</h2>
+<div class="grid">
+<div class="card"><div class="label">Pattern A</div><h3>Constant addition</h3><p>4, 8, 12, 16, ?</p><div class="formula">+4 each time → 20</div></div>
+<div class="card"><div class="label">Pattern B</div><h3>Multiplication</h3><p>3, 6, 12, 24, ?</p><div class="formula">×2 each time → 48</div></div>
+<div class="card"><div class="label">Pattern C</div><h3>Increasing difference</h3><p>2, 5, 9, 14, 20, ?</p><p>Differences: +3, +4, +5, +6.</p><div class="formula">Next +7 → 27</div></div>
+</div>
+<div class="note violet"><b>Quick method:</b> First differences check cheyyi. Tarvatha multiplication/division, squares/cubes, alternate terms check cheyyi. Oka question meeda stuck avvaku.</div>
+</section>
+
+<section class="panel" id="gs">
+<h2 class="title"><span class="icon">🌏</span> General Studies — Indian Polity starter</h2>
+<div class="grid">
+<div class="card"><h3>📜 Constitution key dates</h3><table><tr><th>Event</th><th>Date</th></tr><tr><td>Constitution adopted</td><td>26 November 1949</td></tr><tr><td>Constitution came into force</td><td>26 January 1950</td></tr><tr><td>Drafting Committee Chairman</td><td>Dr. B. R. Ambedkar</td></tr><tr><td>Constituent Assembly President</td><td>Dr. Rajendra Prasad</td></tr></table></div>
+<div class="card"><h3>🧠 Keep concepts separate</h3><p><b>Constitution:</b> fundamental governance framework.</p><p><b>Parliament:</b> Union legislature—President, Lok Sabha and Rajya Sabha.</p><p><b>Government:</b> executive machinery that implements laws and policies.</p><div class="note gold"><b>Exam trap:</b> Adoption date and commencement date are different.</div></div>
+</div>
+</section>
+
+<section class="panel" id="practice">
+<h2 class="title"><span class="icon">📝</span> Percentages — 10-question sprint</h2>
+<p><b>Target: 8 minutes.</b> Select an option to see feedback. After answering, check your score.</p>
+<div id="quiz"></div><button class="button" id="scoreBtn">Check my score</button><div id="score" class="formula hide" style="margin-top:12px"></div>
+</section>
+
+<section class="panel" id="progress">
+<h2 class="title"><span class="icon">✅</span> Your topic progress</h2>
+<p class="small">These checkboxes save on this browser/device using local storage. They won't automatically sync between devices.</p>
+<div id="checks" class="grid">
+<label class="card"><input type="checkbox" data-key="fractions"> Formula shortcuts revised</label>
+<label class="card"><input type="checkbox" data-key="models"> Main question models understood</label>
+<label class="card"><input type="checkbox" data-key="short"> Short-answer practice attempted</label>
+<label class="card"><input type="checkbox" data-key="quiz"> Timed quiz attempted</label>
+<label class="card"><input type="checkbox" data-key="mistakes"> Mistakes recorded for revision</label>
+</div>
+<div class="progressrow" style="margin-top:15px"><b id="progressText">0 of 5 complete</b><span class="small" id="progressPct">0%</span></div><div class="progress"><div class="bar" id="progressBar"></div></div>
+<button class="button secondary" id="resetProgress">Reset checklist</button>
+</section>
+<footer>Telangana SI Study Hub • Starter version • Practice material, not an official previous-year paper.</footer>
+</main>
+<script>
+const qs=[
+{q:"1. 960 lo 25% entha?",o:["220","240","260","280"],a:1,e:"25% = 1/4; 960 ÷ 4 = 240."},
+{q:"2. 720 lo 12.5% entha?",o:["80","90","100","120"],a:1,e:"12.5% = 1/8; 720 ÷ 8 = 90."},
+{q:"3. Oka number lo 35% = 140. Number?",o:["350","400","450","500"],a:1,e:"100% = 140 × 100 ÷ 35 = 400."},
+{q:"4. ₹500 price ₹600 ayindi. Increase %?",o:["10%","15%","20%","25%"],a:2,e:"Increase 100; 100 ÷ 500 × 100 = 20%."},
+{q:"5. ₹800 price ₹680 ayindi. Decrease %?",o:["10%","12%","15%","20%"],a:2,e:"Decrease 120; 120 ÷ 800 × 100 = 15%."},
+{q:"6. 400 lo 45% entha?",o:["160","170","180","190"],a:2,e:"40% = 160; 5% = 20; total = 180."},
+{q:"7. Oka number lo 20% = 64. Number?",o:["280","300","320","340"],a:2,e:"100% = 64 × 5 = 320."},
+{q:"8. ₹20,000 salary 10% increase ayithe new salary?",o:["₹21,000","₹22,000","₹23,000","₹24,000"],a:1,e:"10% = ₹2,000; new salary = ₹22,000."},
+{q:"9. ₹1,500 price 20% decrease ayithe new price?",o:["₹1,100","₹1,200","₹1,250","₹1,300"],a:1,e:"20% = ₹300; new price = ₹1,200."},
+{q:"10. Value 20% increase, then 20% decrease. Overall?",o:["No change","4% increase","4% decrease","2% decrease"],a:2,e:"100 → 120 → 96, net 4% decrease."}
+];
+const root=document.getElementById("quiz");
+qs.forEach((q,i)=>{const box=document.createElement("div");box.className="q";const title=document.createElement("strong");title.textContent=q.q;box.appendChild(title);const opts=document.createElement("div");opts.className="options";q.o.forEach((t,j)=>{const b=document.createElement("button");b.className="opt";b.textContent=String.fromCharCode(65+j)+") "+t;b.onclick=()=>{[...opts.children].forEach(x=>x.classList.remove("correct","wrong"));b.classList.add(j===q.a?"correct":"wrong");fb.textContent=(j===q.a?"✓ Correct. ":"✗ Not quite. ")+q.e;box.dataset.answer=j};opts.appendChild(b)});box.appendChild(opts);const fb=document.createElement("div");fb.className="feedback";box.appendChild(fb);root.appendChild(box)});
+document.getElementById("scoreBtn").onclick=()=>{let score=0,attempted=0;[...root.children].forEach((b,i)=>{if(b.dataset.answer!==undefined){attempted++;if(Number(b.dataset.answer)===qs[i].a)score++}});const el=document.getElementById("score");el.classList.remove("hide");el.textContent=`Score: ${score}/10 • Attempted: ${attempted}/10`+(attempted<10?" • Migilina questions kuda attempt cheyyi.":" • Wrong answers review cheyyi.");localStorage.setItem("tsi_quiz_attempted","1");loadChecks()};
+const checkboxes=[...document.querySelectorAll("#checks input")];
+function loadChecks(){checkboxes.forEach(c=>{c.checked=localStorage.getItem("tsi_"+c.dataset.key)==="1"});const count=checkboxes.filter(c=>c.checked).length;document.getElementById("progressText").textContent=`${count} of ${checkboxes.length} complete`;document.getElementById("progressPct").textContent=`${Math.round(count/checkboxes.length*100)}%`;document.getElementById("progressBar").style.width=(count/checkboxes.length*100)+"%"}
+checkboxes.forEach(c=>c.addEventListener("change",()=>{localStorage.setItem("tsi_"+c.dataset.key,c.checked?"1":"0");loadChecks()}));
+document.getElementById("resetProgress").onclick=()=>{if(confirm("Reset this checklist on this device?")){checkboxes.forEach(c=>localStorage.removeItem("tsi_"+c.dataset.key));loadChecks()}};
+if(localStorage.getItem("tsi_quiz_attempted")==="1"){const quizCheck=checkboxes.find(c=>c.dataset.key==="quiz");if(quizCheck)quizCheck.checked=true}
+loadChecks();
+</script>
+</body>
+</html>
